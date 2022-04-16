@@ -5,8 +5,11 @@ import { getBigNumber } from "../../../utils";
 dotEnvConfig();
 
 const maticProvider = new ethers.providers.JsonRpcProvider(
-  process.env.ALCHEMY_POLYGON_RPC_URL
+  process.env.INFURA_POLYGON_RPC_URL
+  // process.env.ALCHEMY_POLYGON_RPC_URL
+  // process.env.POLYGON_NODE_RPC_URL
 );
+
 // https://polygonscan.com/address/0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6
 const quoterAddress = "0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6";
 const quoterContract = new ethers.Contract(

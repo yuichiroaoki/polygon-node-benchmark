@@ -5,7 +5,7 @@ import { getBigNumber } from "./utils";
 dotEnvConfig();
 
 export const main = async () => {
-  const numberoFTests = 3;
+  const numberoFTests = 100;
   let processTime = 0;
 
   for (let i = 0; i < numberoFTests; i++) {
