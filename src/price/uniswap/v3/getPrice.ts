@@ -5,8 +5,8 @@ import { getBigNumber } from "../../../utils";
 dotEnvConfig();
 
 const maticProvider = new ethers.providers.JsonRpcProvider(
-  process.env.INFURA_POLYGON_RPC_URL
-  // process.env.ALCHEMY_POLYGON_RPC_URL
+  // process.env.INFURA_POLYGON_RPC_URL
+  process.env.POLYGON_RPC_URL
   // process.env.POLYGON_NODE_RPC_URL
 );
 

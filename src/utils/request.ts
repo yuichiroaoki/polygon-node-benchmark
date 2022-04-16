@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 
 interface IRequest {
   data: any;
@@ -39,5 +39,38 @@ export const sendRequest = async (url: string): Promise<IRequest> => {
       }
     });
 
+  return response;
+};
+
+export const sendGetRequest = async (
+  uri: string,
+  config: AxiosRequestConfig = {}
+) => {
+  const response = await axios
+    .get(uri, config)
+    .then((res) => {
+      return res.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      return undefined;
+    });
+  return response;
+};
+
+export const sendPostRequest = async (
+  uri: string,
+  data: any,
+  config: AxiosRequestConfig = {}
+) => {
+  const response = await axios
+    .post(uri, data, config)
+    .then((res) => {
+      return res.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      return undefined;
+    });
   return response;
 };
